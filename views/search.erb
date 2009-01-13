@@ -1,0 +1,16 @@
+<h1>Search Results:</h1>
+<ul>
+  <% @items.each do |item| %>
+  <li><%= item["Title"] %>: 
+    <% if item["BuyItNowAvailable"] %>
+    BIN: <%= item["ConvertedBuyItNowPrice"]["Value"] %>
+    <% end %>
+    <% if item["ConvertedCurrentPrice"] %>
+    Price: <%= item["ConvertedCurrentPrice"]["Value"] %>
+    <% end %>
+    <% if item["GalleryURL"] %>
+    <img src="<%= item["GalleryURL"] %>"/>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
