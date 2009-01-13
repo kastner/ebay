@@ -1,0 +1,2 @@
+A proof of concept ebay applications using the ebay JSON api
+============================================================
